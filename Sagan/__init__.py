@@ -1,7 +1,8 @@
 import sys
-import Logbook
-import Sensor
-import LEDS
+from Logbook import *
+from LEDS import *
+from Sensor import *
+from Timer import *
 import signal
 import time
 import os
