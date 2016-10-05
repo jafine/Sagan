@@ -105,8 +105,8 @@ class Sensor:
                         raise Exception("It appears a devices parameters have been defined incorrectly")
                 return None
     
-    def getValue():
-        return str(self)
+	def getValue():
+		return str(self)
 
 	def getRTC():
 		return RTC
