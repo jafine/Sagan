@@ -49,8 +49,10 @@ class PCF85263A(GenericSensor):
 
 	#Write a single byte of data
 	def WriteData(self, pReg, pData=0x00):
-		self.mBus.write_byte_data(self.mAddr, pReg, pData)
-	
+		try:
+			self.mBus.write_byte_data(self.mAddr, pReg, pData)
+		except:
+			pass # fix timeout errors
 	#Reads a single byte of data
 	def ReadData(self, pData):
 		return (self.mBus.read_byte_data(self.mAddr, pData))
